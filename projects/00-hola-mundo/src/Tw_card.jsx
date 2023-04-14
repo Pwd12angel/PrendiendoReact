@@ -33,7 +33,8 @@ function Tw_card({children,formatUserName,userName, name,following}){
 
             <aside>
                 <button className={buttonClassName} onClick={handleClick}>
-                    {text}
+                    <span className='tw-cartd-text'>{text}</span>
+                    <span className='tw-cartd-stopFollow'>Dejar de seguir</span>
                 </button>
             </aside>
         </article>

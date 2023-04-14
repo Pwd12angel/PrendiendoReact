@@ -1,0 +1,52 @@
+.tw-card {
+    display: flex;
+    align-items: center;
+    color: #fff;
+   justify-content: space-between;
+}
+
+.tw-card-heder{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tw-card-info{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.tw-card header span{
+    opacity: .6;
+}
+
+.tw-card-avatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 1000px;
+}
+
+.tw-button{
+    cursor: pointer;
+    margin-left: 16px;
+    border: 0;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: bold;
+    transition: .3s ease backgroun-color;
+    border: 1px solid black;
+}
+
+.tw-button:hover{
+    background-color: rgb(54, 150, 182);
+   
+}
+
+.tw-button.is-following{
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.tw-button.is-following:hover{
+    background: rgb(255, 78, 78);
+}

@@ -2,38 +2,52 @@ import Tw_card from './Tw_card'
 import './index.css'
 const  App =  () => {
     const format = (userName) => `@${userName}`;
+
+    const users = [
+        {
+            formatUserName: format,
+            userName :"AngelTur27816",
+            name : "Angel Juarez",
+            following : true
+        },
+        {
+            formatUserName: format,
+            userName :"Tomas21",
+            name : "Tomas perez",
+            following : false
+        },
+        {
+            formatUserName: format,
+            userName :"Fani12",
+            name : "Fani Sanchez",
+            following : false
+        },
+        {
+            formatUserName: format,
+            userName :"MonseLG",
+            name : "Monserrat Figueroa",
+            following : true
+        }
+    ]
   
 
     return (
 
         <div className='App'>
-
-        <Tw_card 
-        formatUserName={format} 
-        following = {true} 
-        userName = "angelJb" 
-        name = "Angel Juarez"
-        />
-     
-
-        <Tw_card
-         formatUserName={format} 
-         following = {false} 
-         userName = "SantP" 
-         name= "Santigo Perez" />
-
-        <Tw_card 
-        formatUserName={format} 
-        following = {false} 
-        userName = "Maru" 
-        name= "Marilu Colim" />
-
-        <Tw_card 
-        formatUserName={format} 
-        following = {true} 
-        userName = "Sofia" 
-        name= "Sofia RO" />
-
+            {
+                users.map(user => {
+                    const {formatUserName, userName,name,following} = user
+                
+                    return (
+                        <Tw_card 
+                            key={userName}
+                            formatUserName={formatUserName}
+                            userName={userName}
+                            name={name}
+                            following={following} />
+                    )
+                })
+            }
         </div>
 
     )
